@@ -1,0 +1,961 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    /* Smooth scrolling */
+}
+
+/* Header and Navigation */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Ensures the header stays on top */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4b400;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    /* Reduced top padding */
+    padding-bottom: 20px;
+    /* Smaller bottom padding */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+    justify-content: flex-start;
+    /* Align content to the top */
+    text-align: center;
+    /* Center text horizontally */
+    min-height: 400px;
+    /* Ensure sections have enough height */
+}
+
+.section-light-blue {
+    background: #e0f7fa;
+    /* Light blue color */
+}
+
+.section-light-green {
+    background: #e8f5e9;
+    /* Light green color */
+}
+
+.section-light-peach {
+    background: #fff3e0;
+    /* Light peach color */
+}
+
+/* Centering the content within the section */
+.content-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
+    padding: 20px;
+}
+
+/* Styling for Images */
+.section-image {
+    max-width: 80%;
+    /* Make images responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 20px 0;
+    /* Space around images */
+    border-radius: 8px;
+    /* Optional rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+/* Card Images */
+.card-image {
+    max-width: 100%;
+    /* Ensure images do not overflow */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    /* Rounded corners for card images */
+    margin-bottom: 10px;
+    /* Space between image and text */
+}
+
+/* Call to Action Button */
+.cta-button {
+    background: #f4b400;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background: #333;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form fields styling */
+.modal-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Ensure the date picker input is styled consistently */
+.modal-form input[type="date"] {
+    padding: 10px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="gray" d="M7 10h10v2H7zM0 0h24v24H0z" fill="none"/><path fill="gray" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>') no-repeat right 10px center;
+    background-size: 20px 20px;
+}
+
+/* Form Button */
+.modal-form button {
+    background-color: #f4b400;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.modal-form button:hover {
+    background-color: #333;
+}
+
+/* Services Section */
+/* .service-cards {
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+/* margin-top: 20px; */
+/* flex-wrap: wrap; */
+/* Allows cards to wrap on smaller screens */
+/* gap: 20px;  */
+/* Space between cards */
+/* } */
+*/
+/* .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    flex: 1 1 calc(33% - 40px); /* Responsive width control */
+/* max-width: 100%; /* Prevents overflow */
+/* min-width: 280px; /* Ensures minimum card size */
+*/ */ */
+
+/* Welcome Section Styling */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    /* Ensure text is on the left and image is on the right */
+    flex-wrap: wrap;
+    /* Allow wrapping for responsiveness */
+}
+
+.section-title {
+    text-align: center;
+    /* Center the heading */
+    width: 100%;
+    /* Ensure heading takes full width for proper centering */
+    margin-bottom: 20px;
+    /* Add some space below the heading */
+}
+
+.welcome-text {
+    flex: 1;
+    /* Takes up the left side */
+    padding-right: 20px;
+    /* Space between text and image */
+    text-align: left;
+    /* Align text to the left */
+}
+
+.welcome-image {
+    flex: 1;
+    /* Takes up the right side */
+    text-align: right;
+}
+
+.welcome-image img {
+    max-width: 350px;
+    /* Set the maximum width of the image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    border-radius: 8px;
+    /* Optional: Add a border radius for a smoother look */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;
+        /* Stack the text and image vertically on smaller screens */
+    }
+
+    .welcome-text {
+        padding-right: 0;
+        /* Remove extra padding on smaller screens */
+        text-align: left;
+        /* Keep text left-aligned */
+    }
+
+    .welcome-image {
+        text-align: center;
+        /* Center the image */
+        margin-top: 20px;
+        /* Add some space above the image when stacked */
+    }
+}
+
+/* Services Section */
+.section-light-peach {
+    background: #fff3e0;
+    /* Light peach color */
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    gap: 20px;
+    /* Space between cards */
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff3e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px);
+    /* Make cards responsive */
+    max-width: calc(33.333% - 20px);
+    min-width: 280px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.service-image {
+    max-width: 100%;
+    /* Ensure image is responsive */
+    height: auto;
+    /* Keep aspect ratio */
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        /* Stack cards on smaller screens */
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+/* Leebo's Legacy Section */
+.content-wrapper {
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    /* Center the heading */
+    margin-bottom: 20px;
+    /* Add some space below the heading */
+}
+
+.legacy-section {
+    display: flex;
+    align-items: flex-start;
+    /* Align images and text at the top */
+    justify-content: flex-start;
+    /* Ensure images and text are next to each other */
+    gap: 20px;
+    /* Space between images and text */
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
+}
+
+.legacy-images {
+    display: flex;
+    flex-direction: row;
+    /* Stack images horizontally */
+    gap: 10px;
+    /* Space between images */
+}
+
+.legacy-img {
+    width: 120px;
+    /* Small size for the images */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Add a shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.legacy-img:hover {
+    transform: translateY(-5px) scale(1.05);
+    /* Float up and enlarge on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Deepen shadow on hover */
+}
+
+.legacy-text {
+    flex: 1;
+    /* Allow the text to take up the remaining space */
+    padding-left: 20px;
+    /* Space between the text and images */
+    text-align: left;
+    /* Align text to the left */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .legacy-section {
+        flex-direction: column;
+        /* Stack text and images vertically on smaller screens */
+        align-items: center;
+    }
+
+    .legacy-images {
+        flex-direction: row;
+        /* Display images side by side on mobile */
+        justify-content: center;
+        margin-bottom: 20px;
+        /* Space between images and text */
+    }
+
+    .legacy-img {
+        width: 100px;
+        /* Even smaller images for mobile */
+    }
+
+    .legacy-text {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+/* Ambassador Section Styling */
+.ambassador-section {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-direction: row-reverse;
+    /* Image on the right, text on the left */
+    gap: 20px;
+    /* Space between text and image */
+}
+
+.section-title {
+    text-align: center;
+    /* Center the heading */
+    margin-bottom: 20px;
+    /* Add some space below the heading */
+}
+
+.ambassador-text {
+flex: 1;
+text-align: left;
+/* padding-left: 20px;  */
+/* Add padding to the left for space between text and image */
+}
+
+.ambassador-image {
+    flex: 1;
+    text-align: right;
+}
+
+.ambassador-img {
+    max-width: 100%;
+    /* Ensure image is responsive */
+    height: auto;
+    /* Keep aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for styling */
+}
+
+/* Ambassador Section Image Styling */
+.ambassador-img {
+    /* max-width: 100%; */
+    width: 120;
+    /* Ensure image is responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for styling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.ambassador-img:hover {
+    transform: translateY(-10px) scale(1.05);
+    /* Float up and slightly enlarge */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Add a deeper shadow when hovered */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .ambassador-section {
+        flex-direction: column;
+        /* Stack text and image vertically on smaller screens */
+        align-items: center;
+    }
+
+    .ambassador-text {
+        text-align: center;
+        /* Center text on smaller screens */
+        padding-left: 0;
+        /* Remove padding on smaller screens */
+    }
+
+    .ambassador-image {
+        text-align: center;
+        /* Center the image */
+        margin-top: 20px;
+    }
+}
+
+/* Support Section General Styling */
+.section-title {
+    text-align: center;
+    /* Align heading to the left */
+    margin-bottom: 20px;
+    /* Add space below the heading */
+}
+
+.support-content {
+    display: flex;
+    /* Use flexbox for the text and images */
+    justify-content: space-between;
+    /* Space out the text and images */
+    align-items: flex-start;
+    /* Align images and text at the top */
+    gap: 20px;
+    /* Space between text and images */
+    text-align: left;
+}
+
+.support-text {
+    flex: 1;
+    /* Allow the text to take up the remaining space */
+}
+
+.list {
+    text-align: left;
+}
+
+.images-container {
+    display: flex;
+    justify-content: flex-end;
+    /* Ensure images are aligned to the right */
+    gap: 15px;
+    /* Space between the images */
+    flex-wrap: nowrap;
+    /* Ensure images stay in a row */
+}
+
+/* Styling for the images */
+.support-img {
+    width: 150px;
+    /* Medium size for the images */
+    height: auto;
+    /* Keep aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.support-img:hover {
+    transform: translateY(-10px) scale(1.05);
+    /* Float up and slightly enlarge */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Deepen shadow on hover */
+}
+
+/* Flexbox container for images */
+.images-container {
+    display: flex;
+    justify-content: space-between;
+    /* Space out the image blocks */
+    gap: 20px;
+    /* Add space between images */
+    margin-top: 20px;
+    /* Add some space above the images */
+}
+
+/* Container for image and its respective text */
+.image-with-text {
+    display: flex;
+    flex-direction: column;
+    /* Stack image and text vertically */
+    align-items: center;
+    /* Center the image and text */
+    width: 150px;
+    /* Set the width of the image container */
+    text-align: center;
+    /* Center the text below the image */
+}
+
+/* Image styling */
+.support-img {
+    width: 100%;
+    /* Image takes full width of the container */
+    height: auto;
+    /* Keep the aspect ratio */
+    border-radius: 8px;
+    /* Optional: Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transition for hover effect */
+}
+
+/* Hover effect for the image */
+.support-img:hover {
+    transform: translateY(-10px) scale(1.05);
+    /* Float up and slightly enlarge */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Deepen shadow on hover */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .images-container {
+        flex-direction: column;
+        /* Stack images vertically on small screens */
+        align-items: center;
+        /* Center the image blocks */
+    }
+
+    .image-with-text {
+        width: 120px;
+        /* Reduce image and text container size on smaller screens */
+    }
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .support-content {
+        flex-direction: column;
+        /* Stack text and images vertically on small screens */
+        align-items: center;
+    }
+
+    .images-container {
+        flex-direction: row;
+        /* Ensure images remain in a row */
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .support-img {
+        width: 120px;
+        /* Reduce image size on smaller screens */
+    }
+}
+
+/* General section styling */
+.section-title {
+    text-align: center;
+    /* Center the heading */
+    margin-bottom: 20px;
+    /* Add some space below the heading */
+}
+
+/* Board members image container styling */
+.board-members-image {
+    display: flex;
+    justify-content: center;
+    /* Center the image */
+    margin-top: 20px;
+    /* Space above the image */
+}
+
+/* Styling for the image */
+.board-img {
+    width: 80%;
+    /* Set the width of the image */
+    height: auto;
+    /* Keep aspect ratio */
+    border-radius: 8px;
+    /* Optional: Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Optional: Shadow for better effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
+}
+
+/* Hover effect for the image */
+.board-img:hover {
+    transform: translateY(-10px) scale(1.05);
+    /* Float up and enlarge slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Add deeper shadow on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .board-img {
+        width: 100%;
+        /* Full width for smaller screens */
+    }
+}
+
+/* General section styling */
+.section-title {
+    text-align: center;
+    /* Center the title */
+    margin-bottom: 30px;
+    /* Add space below the title */
+}
+
+/* Board Members Grid */
+.board-members-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wrap the members into multiple rows if necessary */
+    justify-content: space-around;
+    /* Space the members neatly */
+    gap: 30px;
+    /* Add space between the members */
+}
+
+/* Member Card Styling */
+.member {
+    text-align: center;
+    /* Center the text */
+    width: 150px;
+    /* Control the width for small-size cards */
+}
+
+/* Round Image Styling */
+.member-img {
+    width: 120px;
+    /* Adjust the size of the image */
+    height: 120px;
+    /* Ensure the height matches the width */
+    border-radius: 50%;
+    /* Make the image round */
+    object-fit: cover;
+    /* Cover the image to fit within the circle */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Hover effect */
+}
+
+.member-img:hover {
+    transform: translateY(-5px) scale(1.05);
+    /* Slight float and enlarge on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Deepen shadow on hover */
+}
+
+/* Styling for Member Name and Role */
+.member h3 {
+    font-size: 16px;
+    margin: 10px 0 5px 0;
+}
+
+.member p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .board-members-container {
+        justify-content: center;
+        /* Center members on smaller screens */
+    }
+
+    .member {
+        width: 100px;
+        /* Adjust member width for smaller screens */
+    }
+
+    .member-img {
+        width: 80px;
+        /* Smaller image for mobile */
+        height: 80px;
+        /* Keep the image height proportional */
+    }
+}
+
+footer {
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #f4b400;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #333;
+}
+
+/* Contact Section */
+footer {
+    background: #f4f4f4;
+    /* width: 100%; */
+    /* padding: 40px 20px; */
+}
+
+.contact-layout {
+    display: flex;
+    flex-direction: column;
+    /* Default to column for small screens */
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    /* Gap between details and form */
+}
+
+.contact-details {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+.contact-details a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-details a:hover {
+    color: #f4b400;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #f4b400;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    align-self: flex-start;
+    /* Align button to the left */
+}
+
+.contact-form button:hover {
+    background: #333;
+}
+
+/* Social Media Icons */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+    .contact-layout {
+        flex-direction: row;
+        /* Side by side on larger screens */
+    }
+}
+
+.social-media a {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 24px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-media a:hover {
+    color: #f4b400;
+    transform: scale(1.1);
+}
