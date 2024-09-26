@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leebo's Sickle Cell Support Group</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#purpose">Purpose</a></li>
+                <li><a href="#welcome">Welcome</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#legacy">Leebo’s Legacy</a></li>
+                <li><a href="#ambassador">Ambassador</a></li>
+                <li><a href="#support-system">Support System</a></li>
+                <li><a href="#board-members">Board Members</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Purpose Section -->
+    <section id="purpose" class="section-light-blue">
+        <div class="content-wrapper">
+            <h1>Why Your Donation Matters</h1>
+            <p>Your support helps us provide essential care and support to those affected by sickle cell disease.</p>
+            <img src="images/donation.jpg" alt="Donation Purpose" class="section-image">
+            <button class="cta-button" id="donateButton">Donate Now</button>
+        </div>
+    </section>
+
+    <!-- Donation Form in Modal -->
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Donation Form</h2>
+            <form id="donationForm" class="modal-form">
+                <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                <input type="text" id="address" name="address" placeholder="Address" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                <input type="text" id="creditCard" name="creditCard" placeholder="Credit Card Number" required>
+                <input type="date" id="expiryDate" name="expiryDate" placeholder="Expiry Date" required>
+                <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+                <button type="submit">Submit Donation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="section-light-green">
+        <div class="content-wrapper welcome-section">
+            <h2 class="section-title">Welcome to Leebo’s Sickle Cell Support Group</h2>
+            <div class="welcome-text">
+                <p>We are dedicated to supporting individuals and families affected by sickle cell disease. Our mission
+                    is to help those in need through resources, care, and a community that understands the challenges
+                    they face.</p>
+            </div>
+            <div class="welcome-image">
+                <img src="images/Image_1.png" alt="Welcome Image" class="small-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-light-peach">
+        <div class="content-wrapper">
+            <h2 class="section-title">What We Provide</h2>
+            <div class="service-cards">
+                <!-- Service Card 1 -->
+                <div class="card">
+                    <img src="images/Image_2.png" alt="Service 1" class="service-image">
+                    <h3>Counseling and Support</h3>
+                    <p>We provide emotional and mental health support to individuals and families, helping them cope
+                        with challenges.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="card">
+                    <img src="images/Image_3.png" alt="Service 2" class="service-image">
+                    <h3>Education and Outreach</h3>
+                    <p>We raise awareness and educate the community about sickle cell disease through workshops and
+                        events.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="card">
+                    <img src="images/Image_4.png" alt="Service 3" class="service-image">
+                    <h3>Medical Resources</h3>
+                    <p>We connect individuals with the medical resources they need to manage their sickle cell disease
+                        effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leebo's Legacy Section -->
+    <section id="legacy" class="section-light-blue">
+        <div class="content-wrapper">
+            <h2 class="section-title">Leebo's Legacy: Our Story</h2> <!-- Heading on top -->
+            <div class="legacy-section">
+                <div class="legacy-images">
+                    <img src="images/Image_6.png" alt="Leebo's Legacy Image 6" class="legacy-img">
+                    <img src="images/Image_7.png" alt="Leebo's Legacy Image 7" class="legacy-img">
+                </div>
+                <div class="legacy-text">
+                    <p>Leebo’s journey began with a vision to support those living with sickle cell disease. Over the
+                        years, we have grown into a community that provides emotional, medical, and educational
+                        resources to individuals and families affected by the disease. With our collective effort, we
+                        continue to honor Leebo's legacy and impact countless lives.</p>
+                    <p>From counseling and community outreach to medical support and resources, our group stands as a
+                        pillar of hope and strength for all those navigating the challenges of sickle cell disease. Our
+                        story is one of resilience, faith, and unwavering support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambassador Section -->
+    <section id="ambassador" class="section-light-green">
+        <div class="content-wrapper ambassador-section">
+            <div class="ambassador-text">
+                <h2 class="section-title">Meet Our Ambassador</h2>
+                <h3>Danasia Monea Beckett Watts</h3>
+                <h4>Her Story</h4>
+                <p>“My first crisis occurred around my first birthday. By age 10, I had endured numerous surgeries,
+                    including gallbladder removal and mediport placements. Despite frequent hospitalizations, I pursued
+                    my dreams and strived for a normal life. At 18, I faced severe complications, leading to a medically
+                    induced coma and multiple joint replacements. Through my family’s support and my faith, I have
+                    persevered.”</p>
+                <h4>Her Message</h4>
+                <p>“To my fellow warriors, you are not alone; you have a family in 'Leebo’s Sickle Cell Support Group.'”
+                </p>
+            </div>
+            <div class="ambassador-image">
+                <img src="images/Image_8.png" alt="Ambassador Image" class="ambassador-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section with Right-Aligned Images -->
+    <section id="support-system" class="section-light-peach">
+        <div class="content-wrapper">
+            <h2 class="section-title">A Strong Support System Makes Things Happen</h2>
+            <div class="support-content">
+                <div class="support-text">
+                    <p>
+                        Our support system is the foundation of our efforts to help families and individuals facing
+                        sickle cell disease.
+                        With the help of our partners, donors, and dedicated members, we strive to provide continuous
+                        support and care.
+                    <div class="list">
+                        <ul>
+                            <li>PHYAH PROOF TRUCKING</li>
+                            <li> DUBLN GEAR</li>
+                            <li>BROWARD GENERAL HOSPITAL</li>
+                            <li>QUEEN OF DIAMONDS LLC</li>
+                            <li>DILLARD MUSEUM</li>
+                        </ul>
+                    </div>
+                    </p>
+                </div>
+
+                <!-- Images aligned to the right -->
+                <div class="images-container">
+                    <div class="image-with-text">
+                        <img src="images/Image_9.png" alt="Support Image 1" class="support-img">
+                        <p>Thank you to Stephanie Ball for her ​unwavering support and generosity.</p>
+                    </div>
+                    <div class="image-with-text">
+                        <img src="images/Image_10.png" alt="Support Image 2" class="support-img">
+                        <!-- <p>Support Image 2 Description</p> -->
+                    </div>
+                    <div class="image-with-text">
+                        <img src="images/Image_11.png" alt="Support Image 3" class="support-img">
+                        <p>Leebo's Sickle Cell Support Group ​delivering smiles, gifts, and hope to ​Broward General
+                            Hospital."SPREADING JOY AND SUPPORT</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Board Members Section -->
+    <section id="board-members" class="section-light-blue">
+        <div class="content-wrapper">
+            <h2 class="section-title">Meet Our Board Members</h2>
+            <div class="board-members-container">
+                <div class="member">
+                    <img src="images/Image_13.png" alt="Vanessa Finch" class="member-img">
+                    <h3>Vanessa Finch</h3>
+                    <p>Founder and CEO</p>
+                </div>
+                <div class="member">
+                    <img src="images/Image_14.png" alt="Samantha Parish" class="member-img">
+                    <h3>Samantha Parish</h3>
+                    <p>Secretary</p>
+                </div>
+                <div class="member">
+                    <img src="images/Image_15.png" alt="Karim Beckett" class="member-img">
+                    <h3>Karim Beckett</h3>
+                    <p>President</p>
+                </div>
+                <div class="member">
+                    <img src="images/Image_16.png" alt="Maurisa Phillips" class="member-img">
+                    <h3>Maurisa Phillips</h3>
+                    <p>Vice President</p>
+                </div>
+                <div class="member">
+                    <img src="images/Image_18.png" alt="Traci Butler" class="member-img">
+                    <h3>Traci Butler</h3>
+                    <p>Treasurer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer>
+        <section id="contact" class="section-light-green">
+            <div class="content-wrapper contact-layout">
+                <div class="contact-details">
+                    <h2>Contact Us</h2>
+                    <p><strong>Mail Address:</strong><br>5440 State Road 7 Suite 215<br>Fort Lauderdale, FL 33313</p>
+                    <p><strong>Phone Number:</strong><br><a href="tel:+18882807778">(888) 280-7778</a></p>
+                    <p><strong>E-mail:</strong><br><a href="mailto:Vanessa@leeboscsg.org">Vanessa@leeboscsg.org</a></p>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+        })();
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
